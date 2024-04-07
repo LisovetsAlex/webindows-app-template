@@ -1,4 +1,11 @@
 {
+    "name": "create-webindows-app-template",
+    "version": "1.0.0",
+    "description": "starter to create an app with all necessary deps and funcs for webindows.",
+    "main": "./src/index.js",
+    "author": "Alex",
+    "license": "ISC",
+    "bin": "./bin/cli.js",
     "scripts": {
         "build": "webpack --config webpack.config.js"
     },
