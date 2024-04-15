@@ -7,14 +7,14 @@ import { ROOT_PATH, FILES_REQ } from "@webindows/connect/constants";
  * @return {Promise} A Promise that resolves to the JSON response from the server.
  */
 async function requestFolder(address) {
-    const user = localStorage.getItem("loggedInUser");
+    //const user = localStorage.getItem("loggedInUser");
     const result = await fetch(ROOT_PATH, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            user: user,
+            user: { _id: "someUser" },
             path: address,
         }),
     });

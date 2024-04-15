@@ -49,4 +49,4 @@ function changeBackground(bgPath) {
     );
 }
 
-export { addFrameEvent, changeBackground };
+export { changeBackground };
