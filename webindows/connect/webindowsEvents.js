@@ -1,14 +1,4 @@
-function addEvent(event) {
-    const callbackString = event.callback.toString();
-    window.parent.postMessage(
-        {
-            request: "AddEvent",
-            event: { ...event, callback: callbackString },
-        },
-        "*"
-    );
-}
-
+/* 
 function addFrameEvent(event) {
     const callbackString = event.callback.toString();
     const deps = {
@@ -47,26 +37,16 @@ function addFrameEvent(event) {
         },
         "*"
     );
-}
+} */
 
-function removeEvent(name) {
+function changeBackground(bgPath) {
     window.parent.postMessage(
         {
-            request: "RemoveEvent",
-            name: name,
+            request: "ChangeBackground",
+            background: bgPath,
         },
         "*"
     );
 }
 
-function removeFrameEvent(name) {
-    window.parent.postMessage(
-        {
-            request: "RemoveFrameEvent",
-            name: name,
-        },
-        "*"
-    );
-}
-
-export { addEvent, addFrameEvent, removeEvent, removeFrameEvent };
+export { addFrameEvent, changeBackground };
