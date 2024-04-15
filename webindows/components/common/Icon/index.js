@@ -3,7 +3,6 @@ import "./index.css";
 export default function Icon(props) {
     return (
         <img
-            id={props.id}
             src={props.src}
             className={"Icon" + (props.className ? " " + props.className : "")}
             style={{
